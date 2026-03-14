@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-import requests, time
-
+import requests
+import time
+import col
+import console
+import smd
+console.clear()
 webhook_url = "your_webhook_url_here"
 
-class col():
-    # The "col" class is for colors!
-    GREEN = "\033[32m"
-    END = "\033[0m"
-    BOLD = "\033[1m" 
+
 
 class main():
-    # The "main" class is for allmost anything :)
+    # The "main" class is for almost anything :)
     def bann():
         # The "bann" function is for printing the "PMT" Ascii banner! 
-        print(f"{col.GREEN}██████╗ ███╗   ███╗████████╗")
+        print(col.GREEN)
+        print("██████╗ ███╗   ███╗████████╗")
         print("██╔══██╗████╗ ████║╚══██╔══╝")
         print("██████╔╝██╔████╔██║   ██║   ")
         print("██╔═══╝ ██║╚██╔╝██║   ██║   ")
@@ -23,8 +24,14 @@ class main():
     def op():
         print(f"{col.BOLD}Options :{col.END}")
         print(f"{col.GREEN}")
-        print("")
-
-
-main.bann()
-main.op()
+        print("1. About") 
+    
+    def main():
+        main.bann()
+        main.op()
+        ch = input(f"\nAdmin@{smd.host} :~$ ")
+        if ch == "1":
+            console.clear()
+            print(f"{col.BOLD}PMT is a simple tool to send messages to a discord webhook.{col.END}")
+            print(f"{col.GREEN}Created by VigilanBytes aka. SimonK{col.END}")
+main.main()
