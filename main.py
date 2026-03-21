@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-import requests
 import time
 import col
 import console
 import smd
+import webhook
 console.clear()
-webhook_url = "your_webhook_url_here"
-
-
+whu = "your_webhook_url_here"
+# whu = WebHookUrl
 
 class main():
     # The "main" class is for almost anything :)
@@ -19,19 +18,31 @@ class main():
         print("██████╔╝██╔████╔██║   ██║   ")
         print("██╔═══╝ ██║╚██╔╝██║   ██║   ")
         print("██║     ██║ ╚═╝ ██║   ██║   ")
-        print("╚═╝     ╚═╝     ╚═╝   ╚═╝    \n")
-        print("welcome to PMT ")                         
+        print("╚═╝     ╚═╝     ╚═╝   ╚═╝    \n\r\n")  
     def op():
         print(f"{col.BOLD}Options :{col.END}")
         print(f"{col.GREEN}")
-        print("1. About") 
+        print("[1]. About")
+        print("[2]. Suggest Idea")
+        print("welcome to PMT ")                       
     
     def main():
         main.bann()
         main.op()
-        ch = input(f"\nAdmin@{smd.host} :~$ ")
-        if ch == "1":
+        ch = int(input(f"\nAdmin@{smd.host} :~ $ "))
+        if ch == 1:
             console.clear()
-            print(f"{col.BOLD}PMT is a simple tool to send messages to a discord webhook.{col.END}")
             print(f"{col.GREEN}Created by VigilanBytes aka. SimonK{col.END}")
+            q = input("press Enter to contiue ...")
+            main.bann()
+            main.op()
+        elif ch == 2:
+            print("don't spam!")
+            console.clear()
+            idea = input("suggest an idea for PMT : ")
+            webhook.suggest(idea)
+            q = input("press Enter to continue ...")
+            main.bann()
+            main.op()
+        
 main.main()

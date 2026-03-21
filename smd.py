@@ -1,5 +1,8 @@
 import os
 import subprocess 
+
+# Made this to execute commands easier!
+
 def cmd(string):
     os.system(string)
     if string == "sub":
