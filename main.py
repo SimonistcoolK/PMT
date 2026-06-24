@@ -5,8 +5,7 @@ import console
 import smd
 import webhook
 console.clear()
-whu = "your_webhook_url_here"
-# whu = WebHookUrl
+
 
 class main():
     # The "main" class is for almost anything :)
@@ -24,6 +23,7 @@ class main():
         print(f"{col.GREEN}")
         print("[1]. About")
         print("[2]. Suggest Idea")
+        print("[3]. Execute Terminal Command")
         print("welcome to PMT ")                       
     
     def main():
@@ -47,5 +47,14 @@ class main():
                 console.clear()
                 main.bann()
                 main.op()
-        
+            elif ch == 3:
+                console.clear()
+                print("type 'sub' to get my youtube channel link")
+                print("type 'first' to get the first youtube video ever")
+                cmd = input("execute command : ")
+                smd.cmd(cmd)
+                q = input("press Enter to continue ...")
+                console.clear()
+                main.bann()
+                main.op()
 main.main()
