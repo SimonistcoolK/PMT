@@ -57,4 +57,11 @@ class main():
                 console.clear()
                 main.bann()
                 main.op()
+            else:
+                print("invalid option!")
+                time.sleep(1)
+                console.clear()
+                main.bann()
+                main.op()
 main.main()
+print(f"exiting ...{main.q}")
