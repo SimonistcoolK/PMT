@@ -35,14 +35,16 @@ class main():
                 console.clear()
                 print(f"{col.GREEN}Created by VigilanBytes aka. SimonK{col.END}")
                 q = input("press Enter to contiue ...")
+                console.clear()
                 main.bann()
                 main.op()
             elif ch == 2:
-                print("don't spam!")
                 console.clear()
+                print("don't spam!")
                 idea = input("suggest an idea for PMT : ")
                 webhook.suggest(idea)
                 q = input("press Enter to continue ...")
+                console.clear()
                 main.bann()
                 main.op()
         
